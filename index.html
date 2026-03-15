@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Приглашение на свадьбу</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" href="source/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="video-container">
+            <video id="bgVideo" autoplay muted loop playsinline>
+                <source src="source/video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="unlock-container">
+            <div class="unlock-area" id="unlockArea">
+                <div class="slider-handle" id="sliderHandle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#007AFF" stroke-width="3">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </div>
+                <div class="slider-text">Разблокируйте</div>
+                <div class="success-icon" id="successIcon">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main-content" id="mainContent">
+        <section class="hero-frame">
+            <img src="source/wedding-photo.webp" alt="Mihail & Ekaterina">
+            <div class="hero-text-overlay">
+                <div class="hero-names-box">Mihail & Ekaterina</div>
+                <div class="hero-date-box">26/06/2026</div>
+            </div>
+        </section>
+
+        <div class="play-button-wrapper" id="musicToggle">
+            <div class="rotating-text">
+                <img src="source/name_circle.svg" alt="Музыка">
+            </div>
+            <div class="play-icon-container">
+                <img src="source/play.svg" id="playIcon" class="status-icon">
+                <img src="source/Stop.svg" id="pauseIcon" class="status-icon hidden">
+            </div>
+        </div>
+
+        <h1 class="cursive-title ">Дорогие гости!</h1>
+        <div class="description">
+            Мы очень хотим сделать этот день особенным, поэтому приглашаем Вас разделить с нами торжество!
+        </div>
+
+        <div class="calendar-section">
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <span>ЧЕТВЕРГ</span><span>ПЯТНИЦА</span><span>СУББОТА</span>
+                </div>
+                <div class="calendar-months">
+                    <span>июня</span><span>июня</span><span>июня</span>
+                </div>
+                <div class="calendar-numbers reveal">
+                    <span>25</span><span>26</span><span>27</span>
+                </div>
+                <img src="source/calendar.svg" class="calendar-grid" alt="Календарь">
+                <img src="source/circle.svg" class="date-highlight" alt="Выделение">
+            </div>
+        </div>
+
+        <section class="timeline-section">
+            <div class="timeline-container">
+                <svg dur="100" id="timelineSvg" class="timeline-svg" viewBox="0 0 300 1378.53" xmlns="http://www.w3.org/2000/svg">
+                    <path id="motionPath" class="timeline-path" 
+                        d="M160.2452 0.7428C143.0546 130.3222 275.5619 133.8324 262.991 233.3713C247.2522 357.9916 31.2634 334.0154 31.2625 462.9889C31.2616 591.9615 274.3391 573.6084 281.2323 707.4917C288.1255 841.371 112.3116 807.0835 31.2625 892.7112C-59.6797 988.7887 77.4587 1042.705 177.2157 1078.8829C255.991 1107.4469 298.7497 1152.4532 298.7449 1206.989C298.74 1260.9623 250.0776 1309.9303 163.3764 1377.3052" 
+                        fill="none" stroke="#ddd" stroke-width="2" />
+                    <g>
+                        <g transform="translate(-40, -32.5)">
+                            <path fill="#bbafd1" d="M23.8923 5.7458C23.7751 5.7581 23.411 5.8013 23.0901 5.8383C18.9491 6.3073 14.765 8.3377 11.7965 11.3246C9.4576 13.6697 8.0012 16.4221 7.3532 19.7176C6.3473 24.8089 7.4396 29.2646 10.7845 33.7018C12.2409 35.6396 14.4379 37.8366 17.1656 40.0891C18.9368 41.5455 21.0165 43.1007 24.9414 45.884C29.7612 49.3029 32.1804 51.1296 34.291 52.9501C35.9387 54.3757 37.7654 56.2086 38.8454 57.5292C39.1848 57.9489 39.4811 58.2883 39.5119 58.2883C39.5366 58.2883 39.6909 58.1155 39.8575 57.8995C40.2648 57.3688 40.9498 56.5974 41.7212 55.7889C44.2823 53.1229 47.0718 50.8642 52.8975 46.7171C57.3347 43.5574 59.2601 42.1442 60.9511 40.805C63.7096 38.608 65.8449 36.5961 67.4309 34.683C71.4793 29.8139 72.7691 25.0805 71.5904 19.4214C70.5474 14.3918 67.2581 10.2817 62.2779 7.7699C58.5813 5.9124 54.4773 5.2829 50.7931 6.0173C47.0594 6.764 43.9923 8.887 42.11 12.0405C41.9311 12.3429 41.5978 12.8921 41.3756 13.2686C40.7709 14.2807 40.2216 15.4594 39.876 16.4838C39.7094 16.9899 39.5675 17.4527 39.5675 17.5083C39.5675 17.7551 39.4687 17.5885 39.3391 17.1318C39.0306 16.0272 38.3826 14.5214 37.8395 13.6389C37.6914 13.3982 37.4384 12.9662 37.2779 12.67C35.8955 10.1521 33.9577 8.3007 31.4707 7.0973C30.1932 6.4801 28.9713 6.116 27.3668 5.863C26.7928 5.7704 24.3675 5.6902 23.8923 5.7458Z"/>
+                        </g>
+                        <animateMotion id="heartAnimation" dur="100s" begin="0s" fill="freeze" rotate="0">
+                            <mpath href="#motionPath" />
+                        </animateMotion>
+                    </g>
+                </svg>
+                <div class="timeline-events">
+                    <div class="event-item row-1">
+                        <div class="event-title reveal">Welcome</div>
+                        <div class="event-time reveal">16:00</div>
+                    </div>
+                    <div class="event-item row-2">
+                        <div class="event-title reveal">Церемония</div>
+                        <div class="event-time reveal">17:00</div>
+                    </div>
+                    <div class="event-item row-3">
+                        <div class="event-title title-small reveal">Начало Банкета</div>
+                        <div class="event-time reveal">18:00</div>
+                    </div>
+                    <div class="event-item row-4">
+                        <div class="event-title reveal">Торт</div>
+                        <div class="event-time reveal">22:00</div>
+                    </div>
+                    <div class="event-item row-5">
+                        <div class="event-title reveal">Финал</div>
+                        <div class="event-time reveal">23:00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-section section-center">
+            <h2 class="cursive-title location-title reveal">Место проведения</h2>
+            <div class="location-details reveal">
+                <p class="location-name">"Архангельская слобода", 4 зал</p>
+                <p class="location-address">
+                    Ульяновская область, Чердаклинский район,<br>
+                    Мирновское сельское поселение, село Архангельское
+                </p>
+            </div>
+            <a href="https://yandex.com/maps/-/CPBSNVLJ" target="_blank" class="route-button">
+                Построить<br>маршрут
+            </a>
+            <div class="location-image-container">
+                <img src="source/location-photo.webp" alt="Место проведения" class="location-photo">
+            </div>
+        </section>
+
+        <section class="dresscode-section section-center">
+            <h2 class="cursive-title reveal" >Дресс-код</h2>
+            <p class="dresscode-description reveal">
+                Мы будем очень благодарны, если вы поддержите цветовую палитру нашей свадьбы.
+            </p>
+            <div class="palette-container">
+                <div class="color-circle color-1"></div>
+                <div class="color-circle color-2"></div>
+                <div class="color-circle color-3"></div>
+                <div class="color-circle color-4"></div>
+                <div class="color-circle color-5">Не белый</div>
+            </div>
+        </section>
+
+        <section class="details-section">
+            <div class="details-card">
+                <div class="details-content">
+                    <h2 class="cursive-title details-title reveal">Details</h2>
+                    <div class="details-text-block reveal">
+                        <p>Свои теплые слова и пожелания приносите в сердцах, а подарки — в конверте</p>
+                        <div class="details-divider reveal "></div>
+                        <p>Вместо цветов мы будем счастливы получить бутылочку вина, которую вместе разделим однажды вечером.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="survey-section section-center section-bg">
+            <h2 class="cursive-title survey-title reveal">Анкета</h2>
+            <p class="survey-subtitle reveal">Пожалуйста, подтвердите ваше присутствие до 26 мая</p>
+            <iframe class="reveal"name="hidden_confirm" id="hidden_confirm" style="display:none;"></iframe>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfIOcraJcfECTSUAyCEWiqyJzyqcY1-J92Nx6iUyM_drZseSA/formResponse" 
+                method="POST" 
+                target="hidden_confirm" 
+                onsubmit="submitted=true; showSuccessMessage();" 
+                class="wedding-form">
+                <div class="form-item">
+                    <label>Ваше имя и Фамилия *</label>
+                    <input type="text" name="entry.1448410392" required class="form-input">
+                </div>
+                <div class="form-item">
+                    <label>Получится ли у вас присутствовать? *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="entry.742114967" value="Да" required><span class="custom-control"></span> Да</label>
+                        <label><input type="radio" name="entry.742114967" value="Нет"><span class="custom-control"></span> Нет</label>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>Что предпочитаете из напитков *</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="entry.1242638538" value="Шампанское"><span class="custom-control"></span> Шампанское</label>
+                        <label><input type="checkbox" name="entry.1242638538" value="Вино Белое"><span class="custom-control"></span> Вино Белое</label>
+                        <label><input type="checkbox" name="entry.1242638538" value="Вино Красное"><span class="custom-control"></span> Вино Красное</label>
+                        <label><input type="checkbox" name="entry.1242638538" value="Папин Самогон"><span class="custom-control"></span> Папин Самогон</label>
+                        <label><input type="checkbox" name="entry.1242638538" value="Безалкогольные напитки"><span class="custom-control"></span> Безалкогольные напитки</label>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>Ваши предпочтения по горячим блюдам? *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="entry.2058311215" value="Курица" required><span class="custom-control"></span> Курица</label>
+                        <label><input type="radio" name="entry.2058311215" value="Мясо"><span class="custom-control"></span> Мясо</label>
+                        <label><input type="radio" name="entry.2058311215" value="Рыба"><span class="custom-control"></span> Рыба</label>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label>Есть ли у вас аллергия?</label>
+                    <input type="text" name="entry.1076370589" placeholder="Если есть, укажите на что" class="form-input">
+                </div>
+                <div class="form-item">
+                    <label>Вы будете с детьми?</label>
+                    <input type="text" name="entry.125810425" placeholder="Нет / Да (укажите количество)" class="form-input">
+                </div>
+                <button type="submit" class="form-submit-btn">ОТПРАВИТЬ</button>
+            </form>
+            <div id="success-msg" class="hidden">
+                <h3>Спасибо!</h3>
+                <p>Ваш ответ успешно отправлен.</p>
+            </div>
+        </section>
+
+        <section class="contacts-section section-center section-bg">
+            <h2 class="cursive-title contacts-title">Контакты</h2>
+            <div class="contacts-description">
+                Если вы хотите сделать для нас сюрприз или уточнить детали торжества, 
+                свяжитесь, пожалуйста, с нашим организатором — Екатериной.
+            </div>
+            <a href="tel:+79041991690" class="call-button">
+                Позвонить
+            </a>
+        </section>
+
+        <audio id="bgMusic" loop>
+            <source src="source/Ordinary_Fabiene_Se.mp3" type="audio/mpeg">
+        </audio>
+
+        <section class="final-section">
+            <div class="timer-container">
+                <img src="source/end.png" alt="Сирень" class="final-image">
+                <div class="timer-overlay">
+                    <h2 class="timer-title reveal">До встречи через:</h2>
+                    <div id="countdown" class="countdown-grid reveal">
+                        <div class="time-item"><span id="days">00</span><p>день</p></div>
+                        <div class="time-item"><span id="hours">00</span><p>часов</p></div>
+                        <div class="time-item"><span id="minutes">00</span><p>минут</p></div>
+                        <div class="time-item"><span id="seconds">00</span><p>секунд</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

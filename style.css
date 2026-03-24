@@ -744,7 +744,7 @@ input:checked + .custom-control {
         height: 550px;
     }
     .details-divider{
-        margin: 60px auto;
+        margin: 45px auto;
     }
     .details-title { font-size: 60px !important;margin: 48px auto;}
     .details-text-block { font-size: 16px; }

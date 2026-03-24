@@ -329,7 +329,7 @@ h1.cursive-title { margin: 0 auto; }
 .color-2 { background-color: #552028; }
 .color-3 { background-color: #89625b; }
 .color-4 { background-color: #b49590; }
-.color-5 { background-color: #e5d4c2; border: 1px solid #ddd; }
+.color-5 { background-color: #e5d4c2; border: 1px solid #ddd; @media (max-width: 1200px) {font-size: 3vw;} }
 /* DETAILS */
 .details-section {
     margin-top: 10vw;
